@@ -35,9 +35,9 @@ html {
 }
 
 .cyrcle-wave.active{
-  background:url('../img/waves2.png');
+  background:url('../img/blue-wave.png');
   background-repeat: repeat-x;
-  animation: animate 10s;
+  animation: animate 9s;
   background-position: 0 -70px;
 }
 
@@ -45,7 +45,7 @@ html {
 {
   0%
   {
-    background-position: 0px 200px;
+    background-position: 0px 140px;
     background-size: 500px 500px;
   }
   10%
