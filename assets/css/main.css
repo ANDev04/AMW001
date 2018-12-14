@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#btnStartContainer {
+  width: 100%;
+  height: 100%;
+}
+
+#btnStart {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid #3498db;
+  cursor: pointer;
+}
+
+#btnStartIcon {
+  width: 80px;
+  height: auto;
+}
+
+.centerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
