@@ -26,6 +26,7 @@ html {
   border-radius: 100%;
   border: 2px solid #3498db;
   cursor: pointer;
+  background-color: white;
 }
 
 #btnStartIcon {
@@ -46,21 +47,18 @@ html {
   justify-content: center;
   align-items: center;
 }
-
-/*.cyrcle-wave:hover{
-  background-color: red
-}*/
+ 
 .cyrcle-wave {
-  box-shadow: 0px 0px 50px 0px #888888;
+
 }
 .cyrcle-wave.active {
   background: url("../img/blue-wave.png");
   background-repeat: repeat-x;
-  animation: animate 9s;
+  animation: wave-animate 9s;
   background-position: 0 -70px;
 }
 
-@keyframes animate {
+@keyframes wave-animate {
   0% {
     background-position: 0px 140px;
     background-size: 500px 500px;
