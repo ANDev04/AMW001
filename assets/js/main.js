@@ -25,9 +25,6 @@ const AMW001 = {
         }
       })
       .add({
-        begin: function() {
-          AMW001.isAllowControl = true
-        },
         targets: "#btnStart #btnStartText",
         opacity: 1,
         scale: [0.5, 1],
@@ -40,6 +37,9 @@ const AMW001 = {
         delay: 500
       })
       .add({
+        complete: function() {
+          AMW001.isAllowControl = true
+        },
         targets: "#btnStart",
         scale: 50,
         easing: "easeInOutCubic"
@@ -61,6 +61,17 @@ const AMW001 = {
   start: function() {
     AMW001.isPlay = true
     AMW001.animation.play()
+    let btnShadow1 = anime({
+      targets: ".btnStartShadow.first",
+      scale: [1, 1.5],
+      opacity: [1, 0]
+    })
+    let btnShadow2 = anime({
+      targets: ".btnStartShadow.second",
+      scale: [1, 2],
+      delay: 50,
+      opacity: [1, 0]
+    })
   },
   pause: function() {
     AMW001.animation.pause()

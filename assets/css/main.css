@@ -40,6 +40,16 @@ html {
   display: none;
   opacity: 0;
   font-family: Montserrat-Regular;
+  z-index: 100;
+}
+
+.btnStartShadow {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1.5px solid #3498db;
+  position: absolute;
+  opacity: 0;
 }
 
 .centerFlex {
@@ -47,10 +57,7 @@ html {
   justify-content: center;
   align-items: center;
 }
- 
-.cyrcle-wave {
 
-}
 .cyrcle-wave.active {
   background: url("../img/blue-wave.png");
   background-repeat: repeat-x;
@@ -76,4 +83,10 @@ html {
     background-position: 200px -70px;
     background-size: 500px 500px;
   }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

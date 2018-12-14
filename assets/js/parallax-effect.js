@@ -1,8 +1,8 @@
-const scene = document.getElementById('paralax-scene');
+const scene = document.getElementById("paralax-scene")
 const ParallaxBg = {
-	init:function(){
-		new Parallax(scene,{
-			relativeInput: true
-		});
-	}
+  init: function() {
+    new Parallax(scene, {
+      relativeInput: true
+    })
+  }
 }
