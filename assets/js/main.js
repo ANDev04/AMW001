@@ -15,7 +15,10 @@ const AMW001 = {
       targets: "#btnStart #btnStartIcon",
       scale: 0.5,
       opacity: 0,
-      easing: "easeInOutBack"
+      easing: "easeInOutBack",
+      complete: function() {
+        startBtn.classList.add("active")
+      }
     })
 
     startBtn.addEventListener("click", function() {
@@ -41,13 +44,15 @@ const AMW001 = {
     // Mengulang dari awal
     if (AMW001.currentDuration !== 0) {
       AMW001.animation.restart()
+      startBtn.classList.remove("active")
     }
   },
   stop: function() {
     // Stop Animasi dan mengulang dari awal
     if (AMW001.currentDuration !== 0) {
+      AMW001.animation.restart()
       AMW001.animation.pause()
-      AMW001.animation.seek(0)
+      startBtn.classList.remove("active")
     }
   }
 }
