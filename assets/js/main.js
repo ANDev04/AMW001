@@ -11,15 +11,34 @@ const AMW001 = {
         AMW001.currentDuration = anim.progress
       }
     })
-    AMW001.animation.add({
-      targets: "#btnStart #btnStartIcon",
-      scale: 0.5,
-      opacity: 0,
-      easing: "easeInOutBack",
-      complete: function() {
-        startBtn.classList.add("active")
-      }
-    })
+    AMW001.animation
+      .add({
+        targets: "#btnStart #btnStartIcon",
+        scale: 0.5,
+        opacity: 0,
+        easing: "easeInOutBack",
+        complete: function() {
+          startBtn.classList.add("active")
+          document.querySelector("#btnStartText").style.display = "initial"
+        }
+      })
+      .add({
+        targets: "#btnStart #btnStartText",
+        opacity: 1,
+        scale: [0.5, 1],
+        delay: 6500
+      })
+      .add({
+        targets: "#btnStart #btnStartText",
+        opacity: 0,
+        scale: [1, 0.5],
+        delay: 500
+      })
+      .add({
+        targets: "#btnStart",
+        scale: 50,
+        easing: "easeInOutCubic"
+      })
 
     startBtn.addEventListener("click", function() {
       AMW001.isPlay ? AMW001.pause() : AMW001.start()
