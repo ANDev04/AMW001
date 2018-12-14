@@ -50,11 +50,11 @@ html {
   }
   10%
   {
-    background-position: 0 100px;
+    background-position: 100 100px;
   }
   40%
   {
-    background-position: 1000px 0px;
+    background-position: 1000px 100px;
   }
   80%
   {
@@ -65,6 +65,4 @@ html {
     background-position: 200px -70px;
     background-size: 500px 500px;
   }
-   
-
 }
