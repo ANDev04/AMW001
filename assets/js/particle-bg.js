@@ -11,10 +11,10 @@ const particlesBg = {
           }
         },
         color: {
-          value: ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"]
+          value: ["#ff7200", "#B8E986", "#50E3C2", "#FFD300", "#E86363"]
         },
         shape: {
-          type: "circle",
+          type: ["circle"],
           stroke: {
             width: 0,
             color: "#000000"
@@ -39,10 +39,10 @@ const particlesBg = {
           }
         },
         size: {
-          value: 3,
+          value: 15,
           random: true,
           anim: {
-            enable: false,
+            enable: true,
             speed: 40,
             size_min: 0.1,
             sync: false
