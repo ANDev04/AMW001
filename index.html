@@ -9,16 +9,23 @@
   </head>
   <body>
     <div id="btnStartContainer" class="centerFlex">
-      <div id="btnStart" class="centerFlex cyrcle-wave">
-        <img alt="start" src="./assets/img/play.png" id="btnStartIcon" />
+      <div id="paralax-scene">
+        <div data-depth="0.5" style="pointer-events: auto">
+          <div id="btnStart" class="centerFlex cyrcle-wave">
+            <img alt="start" src="./assets/img/play.png" id="btnStartIcon" />
+          </div>
+        </div>
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="./assets/libs/js/anime.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/parallax-effect.js"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function() {
         AMW001.init()
+        ParallaxBg.init()
       })
     </script>
   </body>

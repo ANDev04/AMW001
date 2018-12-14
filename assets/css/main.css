@@ -34,6 +34,12 @@ html {
   align-items: center;
 }
 
+/*.cyrcle-wave:hover{
+  background-color: red
+}*/
+.cyrcle-wave{
+  box-shadow: 0px 0px 50px 0px #888888;
+}
 .cyrcle-wave.active{
   background:url('../img/blue-wave.png');
   background-repeat: repeat-x;
