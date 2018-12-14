@@ -1,6 +1,7 @@
 const startBtn = document.querySelector("#btnStart")
 const AMW001 = {
   isPlay: false,
+  isAllowControl: true,
   currentDuration: 0,
   animation: null,
   init: function() {
@@ -20,9 +21,13 @@ const AMW001 = {
         complete: function() {
           startBtn.classList.add("active")
           document.querySelector("#btnStartText").style.display = "initial"
+          AMW001.isAllowControl = false
         }
       })
       .add({
+        begin: function() {
+          AMW001.isAllowControl = true
+        },
         targets: "#btnStart #btnStartText",
         opacity: 1,
         scale: [0.5, 1],
@@ -41,14 +46,16 @@ const AMW001 = {
       })
 
     startBtn.addEventListener("click", function() {
-      AMW001.isPlay ? AMW001.pause() : AMW001.start()
+      if (AMW001.isAllowControl) AMW001.isPlay ? AMW001.pause() : AMW001.start()
     })
 
     document.addEventListener("keydown", function(e) {
-      if (e.key === "z" || e.key === "Z") AMW001.start()
-      if (e.key === "x" || e.key === "X") AMW001.pause()
-      if (e.key === "c" || e.key === "C") AMW001.stop()
-      if (e.key === "v" || e.key === "V") AMW001.restart()
+      if (AMW001.isAllowControl) {
+        if (e.key === "z" || e.key === "Z") AMW001.start()
+        if (e.key === "x" || e.key === "X") AMW001.pause()
+        if (e.key === "c" || e.key === "C") AMW001.stop()
+        if (e.key === "v" || e.key === "V") AMW001.restart()
+      }
     })
   },
   start: function() {
