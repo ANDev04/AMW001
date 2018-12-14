@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../fonts/Montserrat-ExtraLight.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -28,6 +33,14 @@ html {
   height: auto;
 }
 
+#btnStartText {
+  position: absolute;
+  color: white;
+  display: none;
+  opacity: 0;
+  font-family: Montserrat-Regular;
+}
+
 .centerFlex {
   display: flex;
   justify-content: center;
@@ -37,37 +50,31 @@ html {
 /*.cyrcle-wave:hover{
   background-color: red
 }*/
-.cyrcle-wave{
+.cyrcle-wave {
   box-shadow: 0px 0px 50px 0px #888888;
 }
-.cyrcle-wave.active{
-  background:url('../img/blue-wave.png');
+.cyrcle-wave.active {
+  background: url("../img/blue-wave.png");
   background-repeat: repeat-x;
   animation: animate 9s;
   background-position: 0 -70px;
 }
 
-@keyframes animate
-{
-  0%
-  {
+@keyframes animate {
+  0% {
     background-position: 0px 140px;
     background-size: 500px 500px;
   }
-  10%
-  {
+  10% {
     background-position: 100 100px;
   }
-  40%
-  {
+  40% {
     background-position: 1000px 100px;
   }
-  80%
-  {
+  80% {
     background-position: 2000px -40px;
   }
-  100%
-  {
+  100% {
     background-position: 200px -70px;
     background-size: 500px 500px;
   }
