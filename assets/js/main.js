@@ -6,7 +6,12 @@ const AMW001 = {
     })
   },
   start: function() {
-    console.log("Hello Ini Start")
+    let animation = anime({
+      targets: "#btnStart #btnStartIcon",
+      scale: 0.5,
+      opacity: 0,
+      easing: "easeInOutBack"
+    })
   },
   pause: function() {
     console.log("Hello Ini Pause")
