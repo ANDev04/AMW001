@@ -1,4 +1,5 @@
 const startBtn = document.querySelector("#btnStart")
+const sound = document.getElementById('audio')
 const AMW001 = {
   isPlay: false,
   isAllowControl: true,
@@ -60,6 +61,7 @@ const AMW001 = {
   },
   start: function() {
     AMW001.isPlay = true
+    sound.play();
     AMW001.animation.play()
     let btnShadow1 = anime({
       targets: ".btnStartShadow.first",
